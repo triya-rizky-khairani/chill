@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chill Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <div class="logo">
+          <img src="../images/Logo.png" alt="big-logo" />
+        </div>
+        <div class="header-text">
+          <p class="subtitle">Masuk</p>
+          <p class="subtitle text-center">Selamat datang kembali</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Masukan username"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Kata Sandi</label>
+            <div class="input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Masukan kata sandi"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="togglePassword"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-eye"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                  />
+                  <path
+                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="auth-links">
+            <div class="mb-3 form-check">
+              <label class="form-check-label" for="terms">
+                Belum punya akun? <a href="register.html">Daftar</a>
+              </label>
+              <a href="#" class="forgot-password ms-5">Lupa kata sandi?</a>
+            </div>
+          </div>
+          <a href="beranda.html" class="btn btn-primary mb-3">Masuk</a>
+          <div class="text-or">Atau</div>
+          <a href="#" class="btn btn-google mb-3">
+            <img src="../images/google.png" alt="Google Logo" />
+            Masuk dengan Google
+          </a>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const password = document.getElementById("password");
+          const type =
+            password.getAttribute("type") === "password" ? "text" : "password";
+          password.setAttribute("type", type);
+          this.querySelector("svg").classList.toggle("bi-eye-slash");
+        });
+    </script>
+  </body>
+</html>
