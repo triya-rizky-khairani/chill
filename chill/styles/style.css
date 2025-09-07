@@ -63,8 +63,8 @@ body {
   white-space: nowrap;
   scroll-behavior: smooth;
   padding-bottom: 1rem;
-  gap: 30px; /* ganti margin dengan gap untuk jarak antar card */
-  display: flex; /* ubah dari inline-block ke flex agar gap bisa bekerja */
+  gap: 30px;
+  display: flex;
 }
 
 .carousel-btn {
@@ -164,13 +164,13 @@ body {
   overflow: hidden;
   background-color: transparent;
   transition: transform 0.3s ease;
-  flex: 0 0 auto; /* Ini sangat penting agar tidak shrink */
+  flex: 0 0 auto;
   scroll-snap-align: start;
 }
 .custom-card {
   width: 234px;
   height: 365px;
-  flex: 0 0 auto; /* supaya kartu tidak mengecil */
+  flex: 0 0 auto;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -178,14 +178,14 @@ body {
 .custom-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* atau 'contain' jika ingin seluruh gambar terlihat */
-  border-radius: 10px; /* optional, biar ikut kartu */
+  object-fit: cover;
+  border-radius: 10px;
 }
 .label-episode-baru {
-  position: absolute; /* supaya bisa ditempatkan bebas di atas gambar/card */
+  position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #0f1e93; /* warna biru */
+  background-color: #0f1e93;
   color: white;
   padding: 4px 8px;
   font-size: 12px;
@@ -208,7 +208,7 @@ body {
   border-bottom-left-radius: 4px;
 
   display: flex;
-  flex-direction: column; /* supaya teks vertikal */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -216,7 +216,7 @@ body {
   z-index: 10;
   pointer-events: auto;
   box-sizing: border-box;
-  gap: 0; /* atau sesuai selera */
+  gap: 0;
 }
 
 .card-movie:hover {
